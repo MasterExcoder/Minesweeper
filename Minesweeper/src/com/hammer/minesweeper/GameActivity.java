@@ -19,8 +19,5 @@ public class GameActivity extends Activity {
 		return true;
 	}
 	
-	public void asd() {
-		
-	}
 
 }
