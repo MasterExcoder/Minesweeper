@@ -3,6 +3,7 @@ package com.hammer.minesweeper;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.GridView;
 
 public class GameActivity extends Activity {
 
@@ -10,6 +11,12 @@ public class GameActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_game);
+		
+		Game game = new Game();
+		game.setup();
+		
+		GridView gameGrid = (GridView) findViewById(R.id.gameGrid);
+		gameGrid.setAdapter(new GameAdapter(this, game));
 		
 		
 	}
