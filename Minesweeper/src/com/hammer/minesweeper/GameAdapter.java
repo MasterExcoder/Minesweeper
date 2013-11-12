@@ -9,12 +9,13 @@ import android.widget.TextView;
 public class GameAdapter extends BaseAdapter {
 	Game game;
 	Context context;
-	TextView textView = new TextView(context);
+//	TextView textView;
 	
 	public GameAdapter(Context context, Game game)
 	{
 		this.context = context;
 		setGame(game);
+//		this.textView = new TextView(context);
 	}
 
 	@Override
@@ -25,6 +26,8 @@ public class GameAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
+		
+		TextView textView = new TextView(context);
 		
 		switch (game.getShowState(position%game.getYDim(), position/game.getXDim())) {
 		case HIDDEN:
@@ -70,7 +73,7 @@ public class GameAdapter extends BaseAdapter {
 			textView.setText("F");
 			break;
 		}
-		
+		TextView feld = new TextView(context);
 		return textView;
 	}
 
