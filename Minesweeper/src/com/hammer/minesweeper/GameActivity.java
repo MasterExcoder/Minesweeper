@@ -70,10 +70,6 @@ public class GameActivity extends Activity {
 				if(game.getShowState(position%game.getYDim(), position/game.getXDim()) != ShowState.VISIBLE) {
 					result = game.uncover(position%game.getYDim(), position/game.getXDim());
 				}
-				else {
-					
-				}
-				
 				
 				if(result == Result.HIT) {
 					resultView.setText("You got hit!");
