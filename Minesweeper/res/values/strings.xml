@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">6_Hammer_Minesweeper</string>
+    <string name="app_name">6_Hammer</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="btnNewGame">New Game</string>
