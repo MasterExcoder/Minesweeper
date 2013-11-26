@@ -5,6 +5,8 @@ import com.hammer.minesweeper.Game.ShowState;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,7 +17,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
 
-public class GameActivity extends Activity {
+public class GameActivity extends Activity implements OnSharedPreferenceChangeListener {
 
 	//Define variables
 	Game game;
@@ -92,6 +94,13 @@ public class GameActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.game, menu);
 		return true;
+	}
+
+	@Override
+	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
+			String key) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 
