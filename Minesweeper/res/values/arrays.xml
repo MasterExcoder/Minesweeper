@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_difficultyTypes_entries">
+        <item >Recruit</item>
+        <item >Soldier</item>
+        <item >Veteran</item>
+    </string-array>
+    <integer-array name="pref_difficultyTypes_entryValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+    
+</resources>
