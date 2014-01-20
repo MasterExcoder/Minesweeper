@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="pref_difficultyTypes_entries">
+    <string-array name="pref_difficultyTypes_entries" >
         <item >Recruit</item>
         <item >Soldier</item>
         <item >Veteran</item>
