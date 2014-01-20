@@ -84,8 +84,7 @@ public class GameActivity extends Activity implements OnSharedPreferenceChangeLi
 		});
 		gameGrid.setOnItemLongClickListener(new OnItemLongClickListener() {
 			@Override
-			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
-					int position, long arg3) {
+			public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 				Result result = null;
 				// Check if the clicked field is already uncovered
 				if (game.getShowState(position % game.getYDim(), position

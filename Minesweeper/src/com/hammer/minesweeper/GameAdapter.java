@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class GameAdapter extends BaseAdapter {
@@ -25,53 +26,53 @@ public class GameAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		
-		TextView textView = new TextView(context);
+		ImageView imageView = new ImageView(context);
 		
 		switch (game.getShowState(position%game.getYDim(), position/game.getXDim())) {
 		case HIDDEN:
-			textView.setText("X");
+			imageView.setImageResource(R.drawable.hidden);
 			break;
 			
 		case VISIBLE:
 			switch (game.getGameState(position%game.getYDim(), position/game.getXDim())) {
 			case BOMB:
-				textView.setText("B");
+				imageView.setImageResource(R.drawable.bomb);
 				break;
 			case ZERO:
-				textView.setText("0");
+				imageView.setImageResource(R.drawable.empty);
 				break;
 			case ONE:
-				textView.setText("1");
+				imageView.setImageResource(R.drawable.icon1);
 				break;
 			case TWO:
-				textView.setText("2");
+				imageView.setImageResource(R.drawable.icon2);
 				break;
 			case THREE:
-				textView.setText("3");
+				imageView.setImageResource(R.drawable.icon3);
 				break;
 			case FOUR:
-				textView.setText("4");
+				imageView.setImageResource(R.drawable.icon4);
 				break;
 			case FIVE:
-				textView.setText("5");
+				imageView.setImageResource(R.drawable.icon5);
 				break;
 			case SIX:
-				textView.setText("6");
+				imageView.setImageResource(R.drawable.icon6);
 				break;
 			case SEVEN:
-				textView.setText("7");
+				imageView.setImageResource(R.drawable.icon7);
 				break;
 			case EIGHT:
-				textView.setText("8");
+				imageView.setImageResource(R.drawable.icon8);
 				break;
 			}
 			break;
 			
 		case FLAGGED:
-			textView.setText("F");
+			imageView.setImageResource(R.drawable.flag);
 			break;
 		}
-		return textView;
+		return imageView;
 	}
 
 	public void setGame(Game game) {
