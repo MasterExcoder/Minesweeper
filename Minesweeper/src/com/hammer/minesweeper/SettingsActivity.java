@@ -1,5 +1,6 @@
 package com.hammer.minesweeper;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.support.v4.app.NavUtils;
@@ -28,6 +29,7 @@ public class SettingsActivity extends PreferenceActivity {
 		case android.R.id.home:
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
+			
 		}
 		return super.onOptionsItemSelected(item);
 	}

@@ -5,9 +5,11 @@ import com.hammer.minesweeper.Game.ShowState;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -99,9 +101,17 @@ public class GameActivity extends Activity implements OnSharedPreferenceChangeLi
 	@Override
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
 			String key) {
-		// TODO Auto-generated method stub
 		
 	}
 	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if(item.getItemId()==R.id.action_settings){
+            Intent i = new Intent(this, SettingsActivity.class);
+            startActivity(i);
+	    }
+	    return super.onOptionsItemSelected(item);
+		
+	}
 
 }
