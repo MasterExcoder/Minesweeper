@@ -1,10 +1,13 @@
 package com.hammer.minesweeper;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
 
 public class GameAdapter extends BaseAdapter {
@@ -31,6 +34,7 @@ public class GameAdapter extends BaseAdapter {
 		switch (game.getShowState(position%game.getYDim(), position/game.getXDim())) {
 		case HIDDEN:
 			imageView.setImageResource(R.drawable.hidden);
+			imageView.setScaleType(ScaleType.CENTER_INSIDE);
 			break;
 			
 		case VISIBLE:
