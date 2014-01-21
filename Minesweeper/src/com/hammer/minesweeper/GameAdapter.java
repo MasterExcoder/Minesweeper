@@ -2,6 +2,7 @@ package com.hammer.minesweeper;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ public class GameAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		
 		ImageView imageView = new ImageView(context);
+		imageView.setBackgroundColor(Color.WHITE);
 		
 		switch (game.getShowState(position%game.getYDim(), position/game.getXDim())) {
 		case HIDDEN:
